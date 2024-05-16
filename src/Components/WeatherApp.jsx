@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './WeatherApp.css';
+import cloudsIcon from '../Assets/clouds.png';
+import clearIcon from '../Assets/clear.png';
+import rainIcon from '../Assets/rain.png';
+import drizzleIcon from '../Assets/drizzle.png';
+import mistIcon from '../Assets/mist.png';
+import snowIcon from '../Assets/snow.png';
+import windIcon from '../Assets/wind.png';
+import humidityIcon from '../Assets/humidity.png';
 
 const WeatherApp = () => {
       const [weatherData, setWeatherData] = useState(null);
@@ -43,19 +51,22 @@ const WeatherApp = () => {
       const getWeatherIcon = (weatherMain) => {
             switch (weatherMain) {
                   case "Clouds":
-                        return ("../src/assets/clouds.png");
+                        return cloudsIcon;
                   case "Clear":
-                        return ("../src/assets/clear.png");
+                        return clearIcon;
                   case "Rain":
-                        return ("../src/assets/rain.png");
+                        return rainIcon;
                   case "Drizzle":
-                        return ("../src/assets/drizzle.png");
+                        return drizzleIcon;
                   case "Mist":
-                        return ("../src/assets/mist.png");
+                        return mistIcon;
+                  case "Snow":
+                        return snowIcon;
                   default:
-                        return;
+                        return null;
             }
       };
+
 
       return (
             <div className='container'>
@@ -70,10 +81,11 @@ const WeatherApp = () => {
                               required
                         />
                         <button type="submit" className='btn'>
-                              <div className='fas fa-search search'></div>
+                              <i className='fas fa-search search'></i>
                         </button>
+
                   </form>
-                  {error && <div className='error'><span><i class="fa-solid fa-triangle-exclamation"></i>  Please write a valid city name</span></div>}
+                  {error && <div className='error'><span><i className="fa-solid fa-triangle-exclamation"></i> Please write a valid city name</span></div>}
                   {weatherData && (
                         <div className='weather'>
                               <img
@@ -85,14 +97,14 @@ const WeatherApp = () => {
                               <h3 className='cityName'>{weatherData.name}</h3>
                               <div className='details'>
                                     <div className='col'>
-                                          <img src={("../src/assets/humidity.png")} alt="humidity" />
+                                          <img src={humidityIcon} alt="humidity" />
                                           <div>
                                                 <p className='humidity'>{weatherData.main.humidity}%</p>
                                                 <p>Humidity</p>
                                           </div>
                                     </div>
                                     <div className='col'>
-                                          <img src={("../src/assets/wind.png")} alt="wind" />
+                                          <img src={windIcon} alt="wind" />
                                           <div>
                                                 <p className='wind'>{weatherData.wind.speed} km/h</p>
                                                 <p>Wind Speed</p>
