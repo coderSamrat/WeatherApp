@@ -43,15 +43,15 @@ const WeatherApp = () => {
       const getWeatherIcon = (weatherMain) => {
             switch (weatherMain) {
                   case "Clouds":
-                        return ("./src/assets/clouds.png");
+                        return ("../src/assets/clouds.png");
                   case "Clear":
-                        return ("./src/assets/clear.png");
+                        return ("../src/assets/clear.png");
                   case "Rain":
-                        return ("./src/assets/rain.png");
+                        return ("../src/assets/rain.png");
                   case "Drizzle":
-                        return ("./src/assets/drizzle.png");
+                        return ("../src/assets/drizzle.png");
                   case "Mist":
-                        return ("./src/assets/mist.png");
+                        return ("../src/assets/mist.png");
                   default:
                         return;
             }
@@ -85,14 +85,14 @@ const WeatherApp = () => {
                               <h3 className='cityName'>{weatherData.name}</h3>
                               <div className='details'>
                                     <div className='col'>
-                                          <img src={("./src/assets/humidity.png")} alt="humidity" />
+                                          <img src={("../src/assets/humidity.png")} alt="humidity" />
                                           <div>
                                                 <p className='humidity'>{weatherData.main.humidity}%</p>
                                                 <p>Humidity</p>
                                           </div>
                                     </div>
                                     <div className='col'>
-                                          <img src={("./src/assets/wind.png")} alt="wind" />
+                                          <img src={("../src/assets/wind.png")} alt="wind" />
                                           <div>
                                                 <p className='wind'>{weatherData.wind.speed} km/h</p>
                                                 <p>Wind Speed</p>
