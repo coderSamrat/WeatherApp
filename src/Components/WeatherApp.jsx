@@ -8,6 +8,7 @@ import mistIcon from './Assets/mist.png';
 import snowIcon from './Assets/snow.png';
 import windIcon from './Assets/wind.png';
 import humidityIcon from './Assets/humidity.png';
+import hazeIcon from './Assets/haze.png';
 
 const WeatherApp = () => {
       const [weatherData, setWeatherData] = useState(null);
@@ -62,6 +63,8 @@ const WeatherApp = () => {
                         return mistIcon;
                   case "Snow":
                         return snowIcon;
+                  case "Haze":
+                        return hazeIcon;
                   default:
                         return null;
             }
