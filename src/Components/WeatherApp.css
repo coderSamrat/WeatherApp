@@ -82,16 +82,11 @@
 
 .weather {
       display: block;
-      margin-top: 2rem;
-}
-
-.weather .weatherLogo {
-      margin-top: 1.4rem;
 }
 
 .weather .temperature {
       text-align: center;
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 600;
       color: aqua;
 }
@@ -122,8 +117,8 @@
 }
 
 .weather .details .col img {
-      width: 40px;
-      margin-right: 10px;
+      width: 60px;
+      margin-right: 20px;
 }
 
 .weather .details .col .humidity,
